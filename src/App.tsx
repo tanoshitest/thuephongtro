@@ -21,6 +21,10 @@ import AccountantInvoices from "./pages/accountant/Invoices";
 import AccountantReceivables from "./pages/accountant/Receivables";
 import AccountantReports from "./pages/accountant/Reports";
 import ReceptionistDashboard from "./pages/dashboards/ReceptionistDashboard";
+import ReceptionistTenants from "./pages/receptionist/Tenants";
+import ReceptionistUtilities from "./pages/receptionist/UtilityReadings";
+import ReceptionistVisitors from "./pages/receptionist/Visitors";
+import ReceptionistAnnouncements from "./pages/receptionist/Announcements";
 import TenantDashboard from "./pages/dashboards/TenantDashboard";
 import MaintenanceDashboard from "./pages/dashboards/MaintenanceDashboard";
 import NotFound from "./pages/NotFound";
@@ -52,6 +56,10 @@ const App = () => (
           <Route path="/accountant/receivables" element={<AccountantReceivables />} />
           <Route path="/accountant/reports" element={<AccountantReports />} />
           <Route path="/receptionist" element={<ReceptionistDashboard />} />
+          <Route path="/receptionist/tenants" element={<ReceptionistTenants />} />
+          <Route path="/receptionist/utilities" element={<ReceptionistUtilities />} />
+          <Route path="/receptionist/visitors" element={<ReceptionistVisitors />} />
+          <Route path="/receptionist/announcements" element={<ReceptionistAnnouncements />} />
           <Route path="/tenant" element={<TenantDashboard />} />
           <Route path="/maintenance" element={<MaintenanceDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

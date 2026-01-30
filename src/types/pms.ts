@@ -116,3 +116,41 @@ export interface Room {
   images?: string[];
   features?: string[];
 }
+
+export interface Contract {
+  id: string;
+  tenantId: string;
+  tenantName: string;
+  property: string;
+  unit: string;
+  startDate: string;
+  endDate: string;
+  monthlyRent: number;
+  depositAmount: number;
+  status: 'active' | 'expired' | 'terminated' | 'pending_renewal';
+  fileUrl?: string;
+}
+
+export interface UtilityReading {
+  id: string;
+  property: string;
+  unit: string;
+  tenantName: string;
+  month: string; // MM/YYYY
+  previousElectric: number;
+  currentElectric: number;
+  previousWater: number;
+  currentWater: number;
+  status: 'recorded' | 'billed';
+  recordedDate?: string;
+}
+
+export interface Announcement {
+  id: string;
+  title: string;
+  content: string;
+  date: string;
+  recipients: 'all' | string; // 'all' or specific property name
+  priority: 'normal' | 'high' | 'urgent';
+  sender: string;
+}
