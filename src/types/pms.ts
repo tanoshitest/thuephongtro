@@ -1,10 +1,10 @@
 // Vietnamese Property Management System Types
 
-export type UserRole = 
-  | 'admin' 
-  | 'property-manager' 
-  | 'accountant' 
-  | 'receptionist' 
+export type UserRole =
+  | 'admin'
+  | 'property-manager'
+  | 'accountant'
+  | 'receptionist'
   | 'tenant'
   | 'maintenance';
 
@@ -101,4 +101,18 @@ export interface Expense {
   date: string;
   status: 'approved' | 'pending' | 'rejected';
   approvedBy?: string;
+}
+
+export interface Room {
+  id: string;
+  unit: string;
+  property: string;
+  type: 'studio' | '1br' | '2br' | '3br' | 'penthouse';
+  price: number;
+  status: 'available' | 'occupied' | 'maintenance' | 'reserved';
+  floor: number;
+  area: number;
+  tenantName?: string;
+  images?: string[];
+  features?: string[];
 }
