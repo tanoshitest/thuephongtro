@@ -21,19 +21,19 @@ export function DashboardLayout({ role, title, subtitle, breadcrumbs, children }
   ];
 
   return (
-    <div className="min-h-screen flex w-full bg-muted/40">
+    <div className="h-screen w-full bg-muted/40 flex overflow-hidden">
       <DashboardSidebar 
         role={role} 
         collapsed={sidebarCollapsed}
         onToggle={() => setSidebarCollapsed(!sidebarCollapsed)}
       />
-      <div className="flex-1 flex flex-col min-h-screen overflow-hidden">
+      <div className="flex-1 flex flex-col h-full overflow-hidden">
         <DashboardHeader 
           title={title} 
           subtitle={subtitle} 
           breadcrumbs={defaultBreadcrumbs}
         />
-        <main className="flex-1 p-6 overflow-y-auto bg-muted/40">
+        <main className="flex-1 overflow-y-auto p-6 bg-muted/40">
           <div className="animate-fade-in">
             {children}
           </div>
