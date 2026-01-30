@@ -39,17 +39,17 @@ interface NavItem {
 const navItemsByRole: Record<UserRole, NavItem[]> = {
   admin: [
     { title: 'Tổng quan', icon: LayoutDashboard, href: '/admin' },
-    { 
-      title: 'Nhà trọ', 
-      icon: Building2, 
+    {
+      title: 'Nhà trọ',
+      icon: Building2,
       children: [
         { title: 'Danh sách phòng', href: '/admin/rooms' },
         { title: 'Tình trạng phòng', href: '/admin/room-status' },
       ]
     },
-    { 
-      title: 'Khách thuê', 
-      icon: Users, 
+    {
+      title: 'Khách thuê',
+      icon: Users,
       children: [
         { title: 'Danh sách khách thuê', href: '/admin/tenants' },
         { title: 'Hợp đồng', href: '/admin/contracts' },
@@ -119,15 +119,15 @@ export function DashboardSidebar({ role, collapsed = false, onToggle }: Dashboar
   const navItems = navItemsByRole[role];
 
   const toggleExpanded = (title: string) => {
-    setExpandedItems(prev => 
-      prev.includes(title) 
+    setExpandedItems(prev =>
+      prev.includes(title)
         ? prev.filter(item => item !== title)
         : [...prev, title]
     );
   };
 
   const isActive = (href: string) => location.pathname === href;
-  const isParentActive = (children?: { href: string }[]) => 
+  const isParentActive = (children?: { href: string }[]) =>
     children?.some(child => location.pathname === child.href);
 
   return (
@@ -146,7 +146,7 @@ export function DashboardSidebar({ role, collapsed = false, onToggle }: Dashboar
           </div>
           {!collapsed && (
             <div className="flex flex-col">
-              <span className="font-bold text-lg text-sidebar-foreground leading-tight">SmartPMS</span>
+              <span className="font-bold text-lg text-sidebar-foreground leading-tight">CMS Hostel</span>
               <span className="text-[10px] text-sidebar-muted uppercase tracking-wider">Quản lý nhà trọ</span>
             </div>
           )}
@@ -227,7 +227,7 @@ export function DashboardSidebar({ role, collapsed = false, onToggle }: Dashboar
 
       {/* Collapse Toggle Button */}
       <div className="px-2 py-2 border-t border-sidebar-border">
-        <button 
+        <button
           onClick={onToggle}
           className={cn(
             "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200",
@@ -254,7 +254,7 @@ export function DashboardSidebar({ role, collapsed = false, onToggle }: Dashboar
               <p className="text-sm font-semibold text-sidebar-foreground truncate">Nguyễn Văn An</p>
               <p className="text-xs text-sidebar-muted truncate">{roleLabels[role]}</p>
             </div>
-            <Link 
+            <Link
               to="/"
               className="p-2 rounded-lg hover:bg-sidebar-border transition-colors"
               title="Đăng xuất"
@@ -267,7 +267,7 @@ export function DashboardSidebar({ role, collapsed = false, onToggle }: Dashboar
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-semibold text-sm">
               NV
             </div>
-            <Link 
+            <Link
               to="/"
               className="p-2 rounded-lg hover:bg-sidebar-accent transition-colors"
               title="Đăng xuất"

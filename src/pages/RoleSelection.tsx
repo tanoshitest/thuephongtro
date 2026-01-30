@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { 
-  LayoutDashboard, 
-  Calculator, 
-  UserCheck, 
+import {
+  LayoutDashboard,
+  Calculator,
+  UserCheck,
   Home,
   Wrench,
   ArrowRight,
@@ -78,7 +78,7 @@ export default function RoleSelection() {
               <Building2 className="h-6 w-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">SmartPMS</h1>
+              <h1 className="text-xl font-bold text-foreground">CMS Hostel</h1>
               <p className="text-sm text-muted-foreground">Hệ thống Quản lý Nhà trọ Thông minh</p>
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function RoleSelection() {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
               Hệ thống Quản lý Nhà trọ Thông minh
             </h2>
-            <p className="text-xl text-primary font-semibold mb-2">SmartPMS</p>
+            <p className="text-xl text-primary font-semibold mb-2">CMS Hostel</p>
             <p className="text-muted-foreground text-lg">
               Vui lòng chọn vai trò để tiếp tục
             </p>
@@ -132,7 +132,7 @@ export default function RoleSelection() {
                     )}>
                       <IconComponent className="h-7 w-7" />
                     </div>
-                    
+
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-foreground mb-1">
                         {role.titleVi}
