@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Vietnamese Property Management System - Odoo Enterprise Style Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Odoo Enterprise inspired color palette */
+    --background: 220 20% 97%;
+    --foreground: 220 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+
+    /* Deep Purple Primary - Odoo signature */
+    --primary: 262 67% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Teal Secondary */
+    --secondary: 168 76% 36%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 14% 92%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 262 67% 95%;
+    --accent-foreground: 262 67% 47%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 220 14% 89%;
+    --input: 220 14% 89%;
+    --ring: 262 67% 47%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar - Darker professional look */
+    --sidebar-background: 262 67% 15%;
+    --sidebar-foreground: 262 10% 90%;
+    --sidebar-primary: 262 67% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 262 67% 25%;
+    --sidebar-accent-foreground: 262 10% 95%;
+    --sidebar-border: 262 30% 25%;
+    --sidebar-ring: 262 67% 55%;
+    --sidebar-muted: 262 20% 35%;
+
+    /* Custom tokens for PMS */
+    --stat-card-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --stat-card-hover-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    
+    /* Table styling */
+    --table-header: 220 14% 96%;
+    --table-row-hover: 262 67% 98%;
+    --table-border: 220 14% 91%;
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 220 10% 95%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 220 10% 95%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 220 10% 95%;
+
+    --primary: 262 67% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 168 76% 42%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 262 67% 20%;
+    --accent-foreground: 262 67% 75%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 262 67% 55%;
+
+    --sidebar-background: 220 25% 6%;
+    --sidebar-foreground: 220 10% 90%;
+    --sidebar-primary: 262 67% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 25% 15%;
+    --sidebar-accent-foreground: 220 10% 95%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 262 67% 55%;
+
+    --table-header: 220 25% 15%;
+    --table-row-hover: 262 67% 12%;
+    --table-border: 220 20% 18%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer components {
+  /* Role card hover animation */
+  .role-card {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .role-card:hover {
+    @apply -translate-y-1;
+  }
+
+  /* Stat card styling */
+  .stat-card {
+    @apply bg-card rounded-lg border border-border p-5 transition-shadow duration-200;
+    box-shadow: var(--stat-card-shadow);
+  }
+
+  .stat-card:hover {
+    box-shadow: var(--stat-card-hover-shadow);
+  }
+
+  /* Sidebar link active state */
+  .sidebar-link-active {
+    @apply bg-sidebar-accent text-sidebar-accent-foreground font-medium;
+  }
+
+  /* Data table styling */
+  .data-table {
+    @apply w-full text-sm;
+  }
+
+  .data-table thead {
+    @apply bg-muted/50 border-b border-border;
+  }
+
+  .data-table th {
+    @apply px-4 py-3 text-left font-semibold text-muted-foreground uppercase text-xs tracking-wider;
+  }
+
+  .data-table td {
+    @apply px-4 py-3 border-b border-border;
+  }
+
+  .data-table tbody tr {
+    @apply transition-colors duration-150;
+  }
+
+  .data-table tbody tr:hover {
+    @apply bg-accent/50;
+  }
+
+  /* Badge variants */
+  .badge-success {
+    @apply bg-success/10 text-success border-success/20;
+  }
+
+  .badge-warning {
+    @apply bg-warning/10 text-warning border-warning/20;
+  }
+
+  .badge-danger {
+    @apply bg-destructive/10 text-destructive border-destructive/20;
+  }
+
+  .badge-info {
+    @apply bg-info/10 text-info border-info/20;
+  }
+
+  /* Gradient backgrounds */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(262 67% 47%) 0%, hsl(262 67% 35%) 100%);
+  }
+
+  .gradient-secondary {
+    background: linear-gradient(135deg, hsl(168 76% 36%) 0%, hsl(168 76% 28%) 100%);
+  }
+
+  /* Smooth scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/30;
+  }
+}
+
+@layer utilities {
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0; 
+      transform: translateY(10px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+
+  @keyframes scaleIn {
+    from { 
+      opacity: 0; 
+      transform: scale(0.95); 
+    }
+    to { 
+      opacity: 1; 
+      transform: scale(1); 
+    }
+  }
+}
