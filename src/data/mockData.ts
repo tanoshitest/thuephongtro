@@ -1,11 +1,11 @@
-import { 
-  Property, 
-  Tenant, 
-  Payment, 
-  MaintenanceRequest, 
-  Visitor, 
+import {
+  Property,
+  Tenant,
+  Payment,
+  MaintenanceRequest,
+  Visitor,
   Expense,
-  RoleInfo 
+  RoleInfo
 } from '@/types/pms';
 
 export const roles: RoleInfo[] = [
@@ -533,3 +533,37 @@ export const formatDateTime = (dateTimeString: string): string => {
     minute: '2-digit',
   });
 };
+
+export const rooms: import('@/types/pms').Room[] = [
+  // Sunrise Tower
+  { id: 'R001', unit: 'A-1501', property: 'Sunrise Tower', type: '2br', price: 15000000, status: 'occupied', floor: 15, area: 75, tenantName: 'Nguyễn Văn Minh' },
+  { id: 'R002', unit: 'A-1502', property: 'Sunrise Tower', type: '2br', price: 15000000, status: 'available', floor: 15, area: 75 },
+  { id: 'R003', unit: 'B-802', property: 'Sunrise Tower', type: '1br', price: 12000000, status: 'occupied', floor: 8, area: 55, tenantName: 'Trần Thị Hương' },
+  { id: 'R004', unit: 'A-2205', property: 'Sunrise Tower', type: '3br', price: 17000000, status: 'maintenance', floor: 22, area: 95, tenantName: 'Hoàng Minh Châu' },
+  { id: 'R005', unit: 'A-101', property: 'Sunrise Tower', type: 'studio', price: 8000000, status: 'available', floor: 1, area: 35 },
+
+  // Green Valley
+  { id: 'R006', unit: 'E-501', property: 'Green Valley Residence', type: '1br', price: 11000000, status: 'reserved', floor: 5, area: 50, tenantName: 'Võ Thị Mai Anh' },
+  { id: 'R007', unit: 'E-502', property: 'Green Valley Residence', type: '1br', price: 11000000, status: 'available', floor: 5, area: 50 },
+
+  // Diamond Plaza
+  { id: 'R008', unit: 'C-2103', property: 'Diamond Plaza Apartment', type: '3br', price: 18000000, status: 'occupied', floor: 21, area: 110, tenantName: 'Lê Hoàng Nam' },
+  { id: 'R009', unit: 'C-2104', property: 'Diamond Plaza Apartment', type: '3br', price: 18000000, status: 'available', floor: 21, area: 110 },
+
+  // Hanoi Central
+  { id: 'R010', unit: 'D-1205', property: 'Hà Nội Central Tower', type: '2br', price: 16000000, status: 'occupied', floor: 12, area: 80, tenantName: 'Phạm Thanh Tùng' },
+  { id: 'R011', unit: 'G-903', property: 'Hà Nội Central Tower', type: '2br', price: 13500000, status: 'occupied', floor: 9, area: 78, tenantName: 'Bùi Thị Lan Phương' },
+
+  // Da Nang Beach
+  { id: 'R012', unit: 'F-1808', property: 'Đà Nẵng Beach Resort', type: 'penthouse', price: 28000000, status: 'available', floor: 18, area: 150 },
+  { id: 'R013', unit: 'F-1809', property: 'Đà Nẵng Beach Resort', type: 'penthouse', price: 28000000, status: 'maintenance', floor: 18, area: 150 },
+
+  // More properties for grid demo
+  { id: 'R014', unit: 'A-201', property: 'Sunrise Tower', type: '1br', price: 9000000, status: 'occupied', floor: 2, area: 45 },
+  { id: 'R015', unit: 'A-202', property: 'Sunrise Tower', type: '1br', price: 9000000, status: 'available', floor: 2, area: 45 },
+  { id: 'R016', unit: 'A-203', property: 'Sunrise Tower', type: 'studio', price: 7500000, status: 'occupied', floor: 2, area: 30 },
+  { id: 'R017', unit: 'A-204', property: 'Sunrise Tower', type: 'studio', price: 7500000, status: 'maintenance', floor: 2, area: 30 },
+  { id: 'R018', unit: 'A-301', property: 'Sunrise Tower', type: '2br', price: 14000000, status: 'available', floor: 3, area: 70 },
+  { id: 'R019', unit: 'A-302', property: 'Sunrise Tower', type: '2br', price: 14000000, status: 'reserved', floor: 3, area: 70 },
+  { id: 'R020', unit: 'A-303', property: 'Sunrise Tower', type: '3br', price: 19000000, status: 'available', floor: 3, area: 100 },
+];
