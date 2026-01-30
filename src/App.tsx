@@ -26,7 +26,14 @@ import ReceptionistUtilities from "./pages/receptionist/UtilityReadings";
 import ReceptionistVisitors from "./pages/receptionist/Visitors";
 import ReceptionistAnnouncements from "./pages/receptionist/Announcements";
 import TenantDashboard from "./pages/dashboards/TenantDashboard";
+import TenantInvoices from "./pages/tenant/Invoices";
+import TenantMaintenance from "./pages/tenant/Maintenance";
+import TenantAnnouncements from "./pages/tenant/Announcements";
+import TenantContact from "./pages/tenant/Contact";
 import MaintenanceDashboard from "./pages/dashboards/MaintenanceDashboard";
+import MaintenanceNewRequests from "./pages/maintenance/NewRequests";
+import MaintenanceInProgress from "./pages/maintenance/InProgress";
+import MaintenanceCompleted from "./pages/maintenance/Completed";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -61,7 +68,14 @@ const App = () => (
           <Route path="/receptionist/visitors" element={<ReceptionistVisitors />} />
           <Route path="/receptionist/announcements" element={<ReceptionistAnnouncements />} />
           <Route path="/tenant" element={<TenantDashboard />} />
+          <Route path="/tenant/invoices" element={<TenantInvoices />} />
+          <Route path="/tenant/maintenance" element={<TenantMaintenance />} />
+          <Route path="/tenant/announcements" element={<TenantAnnouncements />} />
+          <Route path="/tenant/contact" element={<TenantContact />} />
           <Route path="/maintenance" element={<MaintenanceDashboard />} />
+          <Route path="/maintenance/requests" element={<MaintenanceNewRequests />} />
+          <Route path="/maintenance/in-progress" element={<MaintenanceInProgress />} />
+          <Route path="/maintenance/completed" element={<MaintenanceCompleted />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
