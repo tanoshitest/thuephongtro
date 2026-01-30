@@ -15,6 +15,11 @@ import Reports from "./pages/admin/Reports";
 import Settings from "./pages/admin/Settings";
 import PropertyManagerDashboard from "./pages/dashboards/PropertyManagerDashboard";
 import AccountantDashboard from "./pages/dashboards/AccountantDashboard";
+import AccountantPayments from "./pages/accountant/Payments";
+import AccountantExpenses from "./pages/accountant/Expenses";
+import AccountantInvoices from "./pages/accountant/Invoices";
+import AccountantReceivables from "./pages/accountant/Receivables";
+import AccountantReports from "./pages/accountant/Reports";
 import ReceptionistDashboard from "./pages/dashboards/ReceptionistDashboard";
 import TenantDashboard from "./pages/dashboards/TenantDashboard";
 import MaintenanceDashboard from "./pages/dashboards/MaintenanceDashboard";
@@ -41,6 +46,11 @@ const App = () => (
           <Route path="/admin/settings" element={<Settings />} />
           <Route path="/property-manager" element={<PropertyManagerDashboard />} />
           <Route path="/accountant" element={<AccountantDashboard />} />
+          <Route path="/accountant/payments" element={<AccountantPayments />} />
+          <Route path="/accountant/expenses" element={<AccountantExpenses />} />
+          <Route path="/accountant/invoices" element={<AccountantInvoices />} />
+          <Route path="/accountant/receivables" element={<AccountantReceivables />} />
+          <Route path="/accountant/reports" element={<AccountantReports />} />
           <Route path="/receptionist" element={<ReceptionistDashboard />} />
           <Route path="/tenant" element={<TenantDashboard />} />
           <Route path="/maintenance" element={<MaintenanceDashboard />} />
