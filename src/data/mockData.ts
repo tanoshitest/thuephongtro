@@ -567,3 +567,102 @@ export const rooms: import('@/types/pms').Room[] = [
   { id: 'R019', unit: 'A-302', property: 'Sunrise Tower', type: '2br', price: 14000000, status: 'reserved', floor: 3, area: 70 },
   { id: 'R020', unit: 'A-303', property: 'Sunrise Tower', type: '3br', price: 19000000, status: 'available', floor: 3, area: 100 },
 ];
+
+export const contracts: import('@/types/pms').Contract[] = [
+  {
+    id: 'HD001',
+    tenantId: 'T001',
+    tenantName: 'Nguyễn Văn Minh',
+    property: 'Sunrise Tower',
+    unit: 'A-1501',
+    startDate: '2023-03-15',
+    endDate: '2025-03-14',
+    monthlyRent: 15000000,
+    depositAmount: 30000000,
+    status: 'active'
+  },
+  {
+    id: 'HD002',
+    tenantId: 'T002',
+    tenantName: 'Trần Thị Hương',
+    property: 'Sunrise Tower',
+    unit: 'B-802',
+    startDate: '2023-11-01',
+    endDate: '2025-10-31',
+    monthlyRent: 12000000,
+    depositAmount: 24000000,
+    status: 'active'
+  },
+  {
+    id: 'HD003',
+    tenantId: 'T003',
+    tenantName: 'Lê Hoàng Nam',
+    property: 'Diamond Plaza Apartment',
+    unit: 'C-2103',
+    startDate: '2024-01-01',
+    endDate: '2026-12-31',
+    monthlyRent: 18000000,
+    depositAmount: 36000000,
+    status: 'active'
+  },
+  {
+    id: 'HD004',
+    tenantId: 'T004',
+    tenantName: 'Phạm Thanh Tùng',
+    property: 'Hà Nội Central Tower',
+    unit: 'D-1205',
+    startDate: '2023-07-01',
+    endDate: '2025-06-30',
+    monthlyRent: 16000000,
+    depositAmount: 32000000,
+    status: 'active'
+  },
+  {
+    id: 'HD005',
+    tenantId: 'T005',
+    tenantName: 'Võ Thị Mai Anh',
+    property: 'Green Valley Residence',
+    unit: 'E-501',
+    startDate: '2024-02-15',
+    endDate: '2025-02-14',
+    monthlyRent: 11000000,
+    depositAmount: 22000000,
+    status: 'pending_renewal'
+  },
+  {
+    id: 'HD006',
+    tenantId: 'T006',
+    tenantName: 'Đặng Quốc Bảo',
+    property: 'Đà Nẵng Beach Resort',
+    unit: 'F-1808',
+    startDate: '2022-06-01',
+    endDate: '2024-05-31',
+    monthlyRent: 14000000,
+    depositAmount: 28000000,
+    status: 'expired'
+  },
+  {
+    id: 'HD007',
+    tenantId: 'T007',
+    tenantName: 'Hoàng Minh Châu',
+    property: 'Sunrise Tower',
+    unit: 'A-2205',
+    startDate: '2023-09-01',
+    endDate: '2025-08-31',
+    monthlyRent: 17000000,
+    depositAmount: 34000000,
+    status: 'active'
+  },
+  {
+    id: 'HD008',
+    tenantId: 'T008',
+    tenantName: 'Bùi Thị Lan Phương',
+    property: 'Hà Nội Central Tower',
+    unit: 'G-903',
+    startDate: '2024-03-01',
+    endDate: '2026-02-28',
+    monthlyRent: 13500000,
+    depositAmount: 27000000,
+    status: 'active'
+  },
+];
